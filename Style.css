@@ -1,0 +1,83 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #444;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    margin-top: 50px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.gallery-item {
+    width: 100%;
+    position: relative;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1) rotateY(10deg); /* 3D hover effect */
+}
+
+.art-video {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.art-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+}
